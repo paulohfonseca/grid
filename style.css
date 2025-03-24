@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#app {
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-template-rows: repeat(3, 1fr); */
+
+    /* grid-template-areas: 
+    "A B B"
+    "A B B"
+    "A C D"
+    ; */
+
+    grid-template: 
+    "A B B" 100px
+    "A B B" 60px
+    "A C D" 100px / 80px 2fr 1fr
+    ;
+    column-gap: 20px;
+    row-gap: 20px;
+
+    height: 100vh;
+}
+
+#app > * {
+    border: 2px solid red;
+}
+
+#app header {
+    grid-area: A;
+    /* grid-row-start: 1;     */
+    /* grid-row-end: 4;     */
+}
+
+#app main {
+    grid-area: B;
+    /* grid-column: 2/4; */
+    /* grid-row: 1/3; */
+}
